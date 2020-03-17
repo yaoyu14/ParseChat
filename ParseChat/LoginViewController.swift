@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signUp(_ sender: Any) {
+
         if usernameTextField.text!.isEmpty || passwordTextField.text!.isEmpty
         {
             let alert = UIAlertController(title: "Info Required!", message: "Please fill out username and password", preferredStyle: .alert)

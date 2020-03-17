@@ -77,7 +77,7 @@
         <!--Chat-->
         <scene sceneID="en9-Ys-pct">
             <objects>
-                <viewController id="oZf-kP-qV8" customClass="ChatViewController" customModule="ParseChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatViewController" id="oZf-kP-qV8" customClass="ChatViewController" customModule="ParseChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uk0-aJ-DkR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,17 +109,31 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfk-9U-i5x">
-                                                    <rect key="frame" x="15" y="11" width="352" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKd-bT-fkl" userLabel="User Label">
+                                                    <rect key="frame" x="22.999999999999996" y="15" width="44.666666666666657" height="20"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfk-9U-i5x">
+                                                    <rect key="frame" x="23" y="40" width="0.0" height="31"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Qfk-9U-i5x" firstAttribute="leading" secondItem="yu7-6K-pGM" secondAttribute="leadingMargin" constant="8" id="5PV-Kh-W7s"/>
+                                                <constraint firstItem="jKd-bT-fkl" firstAttribute="leading" secondItem="yu7-6K-pGM" secondAttribute="leadingMargin" constant="8" id="GGE-aP-6yD"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Qfk-9U-i5x" secondAttribute="bottom" constant="8" id="WWJ-vO-pFl"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Qfk-9U-i5x" secondAttribute="trailing" constant="8" id="jAA-fk-UaG"/>
+                                                <constraint firstItem="jKd-bT-fkl" firstAttribute="top" secondItem="yu7-6K-pGM" secondAttribute="topMargin" constant="4" id="kXW-xf-mR5"/>
+                                                <constraint firstItem="Qfk-9U-i5x" firstAttribute="top" secondItem="jKd-bT-fkl" secondAttribute="bottom" constant="5" id="tbR-hK-Kn3"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="messageListLabel" destination="Qfk-9U-i5x" id="Qnv-hl-Ss2"/>
+                                            <outlet property="userLabel" destination="jKd-bT-fkl" id="6hB-cH-laK"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
