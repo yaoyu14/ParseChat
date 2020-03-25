@@ -153,7 +153,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ipO-vP-TLw"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Chat" id="YQA-Xv-qon"/>
+                    <navigationItem key="navigationItem" title="Chat" id="YQA-Xv-qon">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="eGB-nj-4bB">
+                            <connections>
+                                <action selector="Logout:" destination="oZf-kP-qV8" id="E0G-YQ-seT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="chatTableView" destination="8ce-pq-911" id="Fmb-0v-ocl"/>
                         <outlet property="messageTextField" destination="ssj-JU-v0c" id="zOa-gK-kqZ"/>

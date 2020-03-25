@@ -42,6 +42,10 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    @IBAction func Logout(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @objc func onTimer() {
         let query = PFQuery(className: "Message")
         query.addDescendingOrder("createdAt")
